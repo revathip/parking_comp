@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>On init</title>
+	<style>
+	.left_container{
+	width: 70%;
+	float:left;
+}
+
+.right_col{
+	float: left;
+	width: 30%;
+}
+.clear{
+	clear: both;
+}
+.success{
+	color: green;
+}
+.unpark{
+	color: blue;
+}</style>
+	<script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+	<script src="carApp.js">
+	</script>
+  </head>
+  <body ng-app="app">
+  <div ng-controller="rootComponent as root">
+	<park occupied="root.occupied" on-view-change="root.occupied = $event.occupied"></park>
+	<update-status  occupied="root.occupied" ></update-status>
+	<un-park occupied="root.occupied" on-view-change="root.occupied = $event.occupied"></un-park>
+	
+</div>
+
+  </body>
+  </html>
